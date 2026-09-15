@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+/* 헤더 스타일 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5vw;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 2rem;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 로고 */
+h2 a img {
+  height: 60px; z-index: 9999;
+}
+
+/* 햄버거 메뉴 버튼 */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* 메인 메뉴 nav */
+nav#menuNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 메뉴 리스트 */
+ul.menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10000;
+}
+
+ul.menu li {
+  position: relative;
+  width: 160px;
+  text-align: center;
+}
+
+ul.menu li a {
+  color: tomato;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem;
+  display: block;
+  transition: color 0.3s ease;
+  font-size: 1.3rem;
+}
+
+header:hover, ul.menu li a:hover {
+  color: #50bfff;
+  background-color: #fff;
+}
+
+.menu-container {
+  width: 100%;
+}
+
+/* 페이지네이션 */
+#fp-nav ul li a span{background: #fff;}
+/* 드롭다운 전체 영역 */
+.menu-list {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 4vw; /* header 높이 기준 */
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 2rem 2rem 2rem 10rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 999;
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* 메뉴 hover 시 드롭다운 등장 */
+.menu-container:hover .menu-list {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  max-height: 500px;
+}
+
+/* 컬럼 구조 */
+.menu-list .dropdown-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #fff;
+  min-width: 160px;
+  text-align: center;
+}
+
+.menu-list .dropdown-col a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.2rem 0;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.menu-list .dropdown-col a:hover {
+  color: #50bfff;
+  transform: translateX(4px);
+}
+
+.ani_site::after{
+  content: '';
+  display: inline-block;
+  background: url('../images/icon/link_icon.png') no-repeat;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav#menuNav {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: teal;
+    flex-direction: column;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 9999;
+  }
+
+  nav#menuNav.open {
+    transform: translateX(0);
+  }
+
+  ul.menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-list {
+    display: none !important;
+  }
+}
+
+/* 메뉴 열림 시 스크롤 막기 */
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* fullpage section 텍스트 중앙 정렬용 */
+.section > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #222;
+  height: 100%;
+}
+
+/* footer */
+footer {
+  background-color: #222;
+  color: #fff;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: center;
+  align-items: end;
+  gap: 30rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  position: relative;
+  left: 15rem;
+}
+
+.footer-logo img {
+  width: 120px;
+}
+
+.footer-desc {
+  color: #ccc;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  right: 1rem; bottom: 4rem;
+}
+
+.footer-label {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.footer-select {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: none;
+  background: #444;
+  color: #fff;
+  font-size: 1rem;
+  appearance: none;
+  width: 220px;
+  text-align: left;
+}
+
+@media screen and (min-width:1200px){
+  header{height: 5vw;}
+}
+@media screen and (max-width:1200px){
+  header{height: 9vw;}
+}

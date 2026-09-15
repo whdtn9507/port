@@ -1,0 +1,43 @@
+html{margin: 0;padding: 0;box-sizing: border-box;width: 100%;}
+body{margin: 0;padding: 0;width: 100%;text-align: center;
+    background: url(../images/svg_bg.jpg) no-repeat;
+    background-size: cover;display: table;}
+.wrapper{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 40%;
+}
+
+path{
+stroke:#fff;
+fill:rgb(11, 70, 107);
+opacity: 10;
+stroke-dasharray: 50;
+animation: animate 3s cubic-bezier(.21,.52,.64,.3) infinite;
+
+}
+
+@keyframes animate{
+0%{opacity: 0;
+   fill: none;
+   stroke-dashoffset: 2000;
+}
+
+30%{opacity: 10;
+    fill: none;
+    stroke-dashoffset: 1000;
+
+}
+
+80%{
+fill: rgba(255,255,255,0);
+}
+
+100%{
+    opacity: 0;
+    fill: rgba(255,255,255,0);
+    stroke-dashoffset: 50;
+}
+}

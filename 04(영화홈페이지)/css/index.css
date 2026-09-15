@@ -1,0 +1,544 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none;}
+button{background: none; border:none;}
+body{background-color: #FFFDF0;}
+.blind{font-size: 0; position: absolute; left: -9999px;}
+.center{width: 980px; margin: auto; position: relative;}
+
+/* top banner ************************************************************************************/
+
+#top-banner{background-color: #0d1091;}
+#top-banner img{display: block;}
+#top-banner button{
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    color: white;
+    font-size: 1.5em;
+}
+
+/* header */
+
+header{
+    background: url(../images/bg_header.gif) repeat-x;
+}
+.snb{
+    position: absolute; top: 5px; right: 0;
+}
+.snb .nav01{
+    width: 500px;
+    height: auto;
+    /* background-color: orangered; */
+    position: absolute;
+    top: 0px;
+    left: -470px;
+}
+.snb .nav01 a{
+    text-decoration: none;
+    color: black;
+    padding-right: 10px;
+    font-size: 12px;
+}
+.snb .nav01 a img{
+    width: 15px;
+    height: 15px;
+}
+
+.snb .nav01 a:nth-child(4){
+    color: orangered;
+    font-weight: 800;
+}
+
+
+
+.snb .nav02 a{
+    color: black; font-size: 11px;
+    padding: 0px 0px 0px 10px;
+    font-weight: bold;
+}
+.snb .nav02 a:nth-child(1){
+    background: url(../images/bg_v_line.gif) right center no-repeat;
+    padding-right: 5px;
+}
+.snb .nav02 a:nth-child(7){
+    color: orangered;
+}
+
+
+
+.gnb{
+    position: relative;
+    /* width: 980px; */
+    height: 149px;
+    /* background-color: blue; */
+}
+.gnb h1{
+    width: 136px;
+    height: 59px;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+}
+.gnb h2{
+    width: 234px;
+    height: 32px;
+    position: absolute;
+    top: 35px;
+    left: 373px;
+}
+.card{
+    width: 133px;
+    height: 42px;
+    position: absolute;
+    top: 45px;
+    left: 770px;
+}
+
+.dropdownwrap{
+    /* background-color: gray; */
+    margin-left: 300px;
+}
+
+.dropdown{
+    /* background-color: rosybrown; */
+    position: relative;
+    display: inline-block;
+    margin-top: 84px;
+}
+
+.dropbtn{
+    background-color: transparent;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 900;
+    padding: 14px 16px;
+    border: none;
+    outline: none;
+    cursor:pointer;
+
+    display: inline-block;
+}
+
+.dropbtn:hover, .dropdown:focus{
+    display: block;
+}
+
+
+
+.dropdown-content{
+    display: none;
+    /* 중요 */
+    position: absolute;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    min-width: 160px;
+    /* max-width: ; */
+    z-index: 999;
+}
+
+.dropdown-content a{
+    display: block;
+    /* 중요 */
+    color:white;
+    font-size: 1em;
+    font-weight: 900;
+    padding: 14px 16px;
+    text-decoration: dotted;
+}
+
+
+.dropdown-content a:hover{
+    color:red;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.show{
+    display: block;
+}
+
+
+
+form{
+    position: absolute;
+    top: 0;
+    right: 0;
+    top: 95px;
+}
+form input{
+    width: 170px;
+    height: 24px;
+    border: 1px solid gray;
+    border-right: 0;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+form button{
+    background-color: red;
+    color: white;
+    padding: 3px 2px;
+    width: 50px;
+    height: 24px;
+    font-weight: bold;
+}
+
+/* **************************************** */
+
+.main-ad{
+background: url(../images/bg_c_bricks.png);
+
+}
+
+.movieLine1{
+    position: relative;
+    top:50px;
+    z-index: -1;
+}
+
+.line1{
+    border-top: 1px solid #000;
+    width: 980px;
+    margin: 0 auto;
+    padding-bottom: 4px;
+}
+
+
+.movie-selection{
+    text-align: center;
+    position: relative;
+}
+
+.movie-selection ul li iframe{
+position: absolute;
+left: 0;
+
+}
+
+
+.movie-selection ul li img{
+    position: absolute;
+    right: 0;
+
+}
+
+.movieLine2{
+    position: relative;
+    top:460px;
+    z-index: -1;
+}
+
+.event-center{
+    position: relative;
+    top: 410px;
+}
+.event-center h2{
+    text-align: center;
+}
+
+.event-center .nav03{
+    background-color: red;
+    width: 600px;
+    margin: 20px auto 10px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.event-center .nav03 a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.event-center ul{
+    text-align: center;
+}
+
+.event-center ul li{
+    display: inline-block;
+    padding-right: 3px;
+    margin: 0 0;
+}
+
+
+.line2{
+    position: relative;
+    border-top: 3px solid black;
+    top: 450px;
+    margin: 0 auto;
+    width: 980px;
+}
+
+
+.event-center2{
+    position: relative;
+    top: 500px;
+}
+
+.event-center2 ul{
+    text-align: center;
+}
+    
+.event-center2 ul li{
+    display: inline-block;
+    padding-right: 3px;
+}
+
+.event-center2 ul li img:nth-child(odd){
+    border: 1px solid black;
+}
+
+.event-center2 ul li:nth-child(odd){
+    border: 4px solid black;
+    padding: 3px;
+}
+
+/* .event-center2 ul li img:nth-child(3){
+    border: 1px solid black;
+} */
+
+/* .event-center2 ul li:nth-child(3){
+    border: 4px solid black;
+    padding: 3px;
+} */
+
+
+.info{
+    position: relative;
+    top: 510px;
+    left: 480px;
+
+    padding-bottom: 80px;
+    /* background-color: blue; */
+}
+
+.info a{
+    color: black;
+    font-size: 16px;
+}
+
+.f-list{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    height: 1em;
+    
+    position: absolute;
+    top: 3px;
+    left: 90px;
+}
+
+.f-list::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: -1em -1em 0 -1em;
+    text-align: center;
+} 
+
+.f-list-name{
+    list-style: none;
+    margin-top: 1em;
+    line-height: 1;
+    animation: rolling 6s infinite;
+}
+
+
+@keyframes rolling{
+    0%{transform: translateY(0);}
+    30%{transform: translateY(-25%);}
+    60%{transform: translateY(-50%);}
+    100%{transform: translateY(-75%);}
+}
+
+
+
+
+
+.infobar{
+    position: relative;
+    border-top: 1px solid black;
+    top: 450px;
+    margin: 0 auto;
+    /* width: 980px; */
+    z-index: 10;
+    width: 980px;
+}
+
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+
+
+.orange{
+ width: auto;
+ height: 182px;
+    background-color: #F5711F;
+    position: relative;
+    margin-top: 600px;
+    text-align: center;
+}
+
+
+.orange img{   
+    position: absolute;
+    top: -58px;
+    left: 460px;
+}
+
+
+
+
+
+
+.undernav{
+    position: relative;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid #000;    
+}
+
+.undernav a{
+padding: 10px 0;
+    /* background-color: blue; */
+}
+
+.undernav img{
+    width: 110px;
+    height: 110px;
+    
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+.lastbar{
+position: relative;
+text-align: center;
+margin-top: 10px;
+}
+
+.lastbar ul{
+    list-style: none;
+}
+
+.lastbar ul li{
+    display: inline-block;
+}
+
+.lastbar ul li a{
+    color: #000;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.underfooter{
+position: relative;
+text-align: center;
+}
+
+.underfooter img{
+    display: inline-block;
+    position: absolute;
+    
+    top: 0;
+    left: 460px;
+}
+
+.underfooter .addwrap{
+    display: inline-block;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 580px;
+}
+
+.underfooter .addwrap div p, 
+.underfooter .addwrap div button{
+display: inline-block;
+}
+
+
+.underfooter .addwrap div button {
+border: 1px solid #000;
+border-radius: 5px;
+margin: -3px 0 0 15px;
+padding: 0 5px;
+
+}
+
+.underfooter .addwrap div button a{
+color: #000;
+overflow: 5px;
+font-size: 12px;
+}
+
+
+.underfooter .iconwrap{
+position: absolute;
+top: 40px;left: 1260px;
+z-index: 10;
+}
+
+
+.underfooter i{
+font-size: 30px;
+}
+
+footer .underbgimg{
+width: 100%;
+height: 100%;
+background: url(../images/bg_footer_com.gif);
+position: relative;
+margin-top: -60px;
+}
+
+footer .lastbar li+li::before{
+    content: '|';
+    padding-right: 5px;
+}
+
+
+.addwrap ul li, .addwrap button{
+float:left;
+}
+
+.addwrap p{
+    clear: both;
+    margin-top: 20px;
+}
+
+.underfooter .addwrap li+li::before{
+    content: '|';
+    padding-right: 5px;
+}
+/* ************************************ */
+
+.fixbar{
+position: fixed;
+top: 200px;
+left: 1500px;
+}
+
+.five-nav{
+border: 3px solid orangered;
+width: 110px;
+text-align: center;
+border-radius: 5px;
+}
+
+.five-nav a{
+display: block;
+}

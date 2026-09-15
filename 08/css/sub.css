@@ -1,0 +1,168 @@
+
+/* 헤더 */
+header{background-color: aliceblue;}
+
+/* 축산 start */
+/* 본문 */
+.cert_article{width: 100%; height: 100vh; background: url('../images/sub/license/license_bg.jpg')no-repeat; background-size: cover; background-position: center;}
+.cert_select{
+    position: relative; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    top: 15vw;
+}
+/* cert_box */
+.cert_box{
+    /* position: absolute; */
+    width: 350px;
+    height: 480px;
+    background-color: #fff;
+    border-radius: 10px;
+    /* transform: translateY(10px); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    opacity: .9;
+}
+.cert_box a{text-decoration: none; color: #000;}
+.cert_box:hover{cursor: pointer; transform: translateY(-30px);
+    box-shadow: 0 0 30px 5px gold; opacity: 1;}
+.cert_box .box_top{width: 100%; margin: 0 auto;}
+.cert_box .box_top img{width: 100%; height: auto; background-size: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+
+.cert_box .box_bot{padding-top: 1rem;}
+.cert_box .box_bot p{font-size: 1.5rem; font-weight: 700;}
+.cert_box .box_list{margin-top: .7rem; text-align: left; display: flex; flex-direction: column; gap: .5rem;}
+.box_list span{font-size: 1.2rem; font-weight: 500; text-align: center;}
+.box_list ul li{margin: 0 10px 5px; line-height: 1.2; padding-top: .2rem;}
+
+/* 축산 관련 end */
+
+/* 반려 동물 start */
+.selectTab{position: relative;}
+.certNav{position: absolute; top: auto; bottom: 1vw; left: 35%;}
+.tabList{display: flex; flex-direction: row; align-items: center; justify-content:center; gap: 2rem;}
+.tabList li{width: 10rem; height: 3.5rem; text-align: center; background-color: darkblue; line-height: 2.2; border-radius: 30px;}
+.tabList li a{text-decoration: none; color: #fff; font-size:1.5rem; font-weight: 600;}
+.tabList li:hover{background-color: skyblue; transition: .3s background-color;}
+.tabList li:hover a{color: #000;}
+
+.slick-slide {
+  opacity: 0.5;
+  filter: blur(3px);
+  transform: scale(0.9);
+  transition: all 0.6s ease;
+}
+
+.slick-current {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: scale(1);
+}
+
+#third-Slider .slick-slide {
+  opacity: 1;
+  filter: none;
+  transform: none;
+  transition: 1s;
+}
+
+.certNav_conts{position: absolute; top: 9vw; bottom: auto; width: 100%; height: auto; min-height: 500px;}
+ul.cert_slider li{margin: 0 20px;}
+ul.cert_slider li a{text-decoration: none;}
+.cert_list_item .cert_tit{text-align: center; margin: 0 auto; color: #000; background-color: beige; border-radius: 20px;}
+
+.cert_tit .cert_div{display: block; height: auto; padding: 25px 0;}
+.cert_tit .cert_div .cert_tabTit{display: inline-block; width: 100px; font-size: 1rem; text-align: center; color: gray;}
+.cert_tit .cert_div h2{font-size: 3rem; font-weight: 600; text-align: center;}
+.cert_tit .cert_div .cert_job_tit{
+    font-size: 1.5rem; color: dimgray; line-height: 1.6;
+}
+.cert_tit .cert_div .cert_job_tit.sr{font-size: 1rem;}
+
+/* 이미지&내용 */
+.job_conts{padding: 10px 45px;}
+.job_conts img{width: 100%; height: auto; object-fit: cover; margin: 0 auto; padding: 10px 0;}
+.job_conts p{text-align: justify; line-height: 1.2; font-weight: 400;}
+.job_conts p strong{font-weight: 700; font-size: 1.2rem;}
+
+/* 반려동물 end */
+/* 동물복지 start */
+.welfare_container{width: 100%; height: 100vh; background: url('../images/sub/welfare/welfare_bg.jpg')no-repeat; background-size: cover; background-position: center;}
+.welfare_div{max-width: 1500px; height: auto; min-height: 650px;transform: translate(220px, 160px);}
+.welfare_boxList{display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2vw 7vw; }
+.welfare_txt{color: #fff; transform: translateY(-30px); text-align: center;}
+.welfare_h2{font-size: 3rem; font-weight: 600; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.welfare_span{display: inline-block; padding-top: 7px; font-size: 1rem; color: #c4c4c4cb;}
+/* box */
+.welfare_box{position: relative; width: 300px; height: 300px; background-color: #fff; box-shadow: 0 0 10px; display: flex; justify-content: center; align-items: center; text-align: center; overflow: hidden; transition: all 0.3s;}
+.welfare_box a{text-decoration: none;}
+.welfare_box h3{position: relative; opacity: 0; font-size: 2rem; color: #fff; z-index: 2; transition: opacity 0.3s; font-weight: 600;}
+.welfare_box:hover h3{opacity: 1;}
+/* overlay */
+.welfare_box .overlay{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); opacity: 0; transition: opacity 0.3s; z-index: 1;}
+.welfare_box:hover .overlay{opacity: 1;}
+
+/* box img */
+#wel_01{background: url('../images/sub/welfare/img_welfare_01.jpg')no-repeat center / cover;}
+#wel_02{background: url('../images/sub/welfare/img_welfare_02.jpg')no-repeat center / cover;}
+#wel_03{background: url('../images/sub/welfare/img_welfare_03.png')no-repeat center / cover;}
+#wel_04{background: url('../images/sub/welfare/img_welfare_04.jpg')no-repeat center / cover;}
+#wel_05{background: url('../images/sub/welfare/img_welfare_05.jpg')no-repeat center / cover;}
+
+/* 팝업 제목 */
+.wel_txt{font-size: 1.5rem;}
+.wel_img{width: 100%;}
+/* 팝업 */
+#wrap{
+    margin-top: 100px;
+    margin-left: 280px;
+}
+
+.pop_wrap{
+    width: 100%;
+    position:fixed; 
+    top:0; left:0; right:0; bottom:0; 
+    background:rgba(0,0,0,.5); 
+    font-size:0; text-align:center;
+    z-index: 9999;
+}
+.pop_wrap:after{
+    display:inline-block; 
+    height:100%; vertical-align:middle; 
+    content:'';
+}
+
+.pop_wrap .pop_inner{
+    display:inline-block; padding:20px 40px; 
+    background:#fff; width:500px; vertical-align:middle;
+    font-size:15px; font-weight: 700; border-radius: 5px;
+}
+
+.pop_eco{
+    display: flex; flex-direction: column; 
+    align-items: center; gap: 2rem;
+}
+.eco_01{width: 50%;}
+.eco_02{width: 100%;}
+.pop_eco_div{
+    display: flex; flex-direction: row;
+    text-align: justify; font-weight: 500;
+    line-height: 1.2; gap: 1rem;
+}
+.pop_eco_div2{
+    display: flex; flex-direction: column; align-items: center;
+    text-align: justify; font-weight: 500;
+    line-height: 1.2; gap: 1rem;
+}
+.pop_eco_txt{display: flex; flex-direction: column; gap: 1rem;}
+.btn_close{margin-top: .5rem;}
+
+/* 관련사이트 */

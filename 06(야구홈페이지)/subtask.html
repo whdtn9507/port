@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/subtask.css">
+    <link rel="shortcut icon" href="images/ico/logo.ico">
+    <title>Player</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="mon_list">
+                <li><a href="index.html">Monster</a></li>
+                <li><a href="subtask.html">Player</a>
+                    <ul class="sub-menu">
+                        <li><a href="subtask.html" data-value="coach">감독</a></li>
+                        <li><a href="subtask.html" data-value="coach">코치</a></li>
+                        <li><a href="subtask.html" data-value="coach">선수단</a></li>
+                        <li><a href="subtask.html" data-value="pitcher">중계진</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html"><img src="images/monster_logo.svg" alt="로고"></a></li>
+                <li><a href="https://wb-play.co.kr/ckmonsters.html" target="_blank">Shop</a></li>
+                <li><a href="#">Scene</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="mon_player_table">
+        <div class="player_select">
+            <div class="selectBox">
+                <input type="radio" id="tab1" name="tabList" value="#coach">
+                <label for="tab1">감독 / 코치</label>
+            </div>
+            <div class="selectBox">
+                <input type="radio" id="tab2" name="tabList" value="#pitcher">
+                <label for="tab2">투수</label>
+            </div>
+            <div class="selectBox">
+                <input type="radio" id="tab3" name="tabList" value="#catcher">
+                <label for="tab3">포수</label>
+            </div>
+            <div class="selectBox">
+                <input type="radio" id="tab4" name="tabList" value="#inplayer">
+                <label for="tab4">내야수</label>
+            </div>
+            <div class="selectBox">
+                <input type="radio" id="tab5" name="tabList" value="#outplayer">
+                <label for="tab5">외야수</label>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="introduce" class="tab-contents">
+        <img src="images/player/img_mon_introduce.jpg" alt="선수단 소개">
+    </div>
+    <div id="coach" class="tab-contents">
+        <img src="images/player/img_mon_coach.jpg" alt="감독/코치 소개 이미지">
+    </div>
+    <div id="pitcher" class="tab-contents">
+        <img src="images/player/img_mon_pitcher.jpg" alt="투수 소개 이미지">
+    </div>
+    <div id="catcher" class="tab-contents">
+        <img src="images/player/img_mon_catcher.jpg" alt="포수 소개 이미지">
+    </div>
+    <div id="inplayer" class="tab-contents">
+        <img src="images/player/img_mon_inplayer.jpg" alt="내야수 소개 이미지">
+    </div>
+    <div id="outplayer" class="tab-contents">
+        <img src="images/player/img_mon_outplayer.jpg" alt="외야수 소개 이미지">
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // 해당 버튼 클릭시 해당 설명 나오기
+            $(".tab-contents").not(":first").hide();
+
+            $(".player_select input").on("click", function(){
+                $(this).parent().addClass("active").siblings().removeClass("active");
+
+                var link = $(this).attr("value");
+                $(".tab-contents").hide();
+                $(link).show();
+            });
+        })
+    </script>
+</body>
+</html>

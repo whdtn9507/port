@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+
+    <!-- ico -->
+    <link rel="icon" type="image/x-icon" href="images/ico/animals_icon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css"><!-- 메인 css -->
+
+    <!-- 라이브러리 -->
+    <link rel="stylesheet" type="text/css" href="library/fullpage/css/jquery.fullpage.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="library/jquery/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="library/fullpage/js/jquery.fullpage.js"></script>
+</head>
+<body>
+    <header>
+        <h2><a href="index.html"><img src="images/logo/logo_01.png" alt="반려동물 전문 사이트 로고"></a></h2>
+        <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+        <nav id="menuNav">
+            <div class="menu-container">
+                <ul class="menu">
+                    <li><a href="#" data-menuanchor="section02">반려동물</a></li>
+                    <li><a href="license_01.html" data-menuanchor="section03">자격증</a></li>
+                    <li><a href="Zoosite.html">관련사이트</a></li>
+                </ul>
+                <div class="menu-list">
+                    <div class="dropdown-col">
+                        <a href="#">생태계유지</a>
+                        <a href="#">생물다양성</a>
+                        <a href="#">윤리적책임</a>
+                        <a href="#">삶의질향상</a>
+                    </div>
+                    <div class="dropdown-col">
+                        <a href="license_01.html">축산관련</a>
+                        <a href="license_02.html">반려동물</a>
+                        <a href="license_03.html">동물복지</a>
+                    </div>
+                    <div class="dropdown-col"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="fullpage">
+            <div class="section homeBg">
+                <div class="wild_div">
+                    <h2 class="tracking-in-expand" data-aos="zoom-out">동물을 사랑하는 마음으로</h2>
+                </div>
+            </div>
+            <div class="section petBg">
+                <div class="pet_div">
+                    <div class="pet_top">
+                        <h2 class="pet_top_h2 text-focus-in" aria-label="반려동물 문구">동물의 안식처와 보호을 하기 위해선<br>어떻게 해야 될까?</h2>
+                    </div>
+                    <div class="pet_bottom">
+                        <a href="#pop_info_1" class="pet_box pet_01" aria-label="생태계 유지"></a>
+                        <a href="#pop_info_2" class="pet_box pet_02" aria-label="생물 다양성 보존"></a>
+                        <a href="#pop_info_3" class="pet_box pet_03" aria-label="윤리적 책임"></a>
+                        <a href="#pop_info_4" class="pet_box pet_04" aria-label="인간의 삶의 질 향상"></a>
+                    </div>
+                </div>
+                <div id="pop_info_1" class="pop_wrap" style="display:none;">
+                    <div class="pop_inner">
+                        <div class="pop_eco">
+                            <p class="dsc">생태계 유지의 원리</p>
+                            <div class="pop_eco_div">
+                                <img src="images/section02/ecosystem_01.png" alt="먹이 사슬과 먹이 그물" class="eco_01">
+                                <div class="pop_eco_txt">
+                                    <p>(1) 생물들 간의 먹이 관계가 사슬처럼 연결되어 있는 것을 먹이 사슬이라 하고, 먹이 사슬이 복잡하게 얽혀 있는 것을 먹이 그물이라 한다.</p>
+                                    <ul>
+                                        <li>&#9312; 영양 단계 : 먹이 사슬의 각 단계</li><br>
+                                        <li>&#9313; 생태적 지위 : 개체군이 생물 군집에서 차지하는 공간적 위치와 먹이 사슬에서의 위치를 포함한 지위</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pop_eco_div2">
+                                <img src="images/section02/ecosystem_02.png" alt="생태계의 평형" class="eco_02">
+                                <div class="pop_eco_txt">
+                                    <p>(2) 생태계에서 어느 한 영양 단계의 개체수가 일시적으로 증가하거나 감소하더라도 먹이 사슬에 의해 다시 평형을 유지하게 된다.</p>
+                                    <ul>
+                                        <li>&#9312; 생태계의 평형 : 생태계를 구성하는 생물 군집, 개체수, 물질의 양, 에너지의 흐름이 일정하게 유지되는 안정된 상태</li><br>
+                                        <li>&#9313; 먹이 사슬에 의한 평형 유지 : 생태계의 어느 한 영양 단계의 개체수가 일시적으로 증가하거나 감소하더라도 시간이 지나면 먹이 사슬에 의해 다시 평형을 유지하게 된다.</li>
+                                        <li>&#9314; 평형 유지 과정 : 피식자 증가 &rarr; 포식자 증가 &rarr; 피식자 감소 &rarr; 포식자 감소 &rarr; 피식자 증가의 순서로 일어난다</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_close">닫기</button>
+                    </div>
+                </div>
+                <div id="pop_info_2" class="pop_wrap" style="display:none;">
+                    <div class="pop_inner">
+                        <div class="pop_eco">
+                            <p class="dsc">생물 다양성 보존</p>
+                            <div class="pop_eco_div2">
+                                <img src="images/section02/ecosystem_03.png" alt="우리나라에 자생하는 생물 분포표" class="eco_01">
+                                <div class="pop_eco_txt">
+                                    <p>(1) 우리나라에 서식하는 생물종은 대략 10만 종 정도로 추정되는데, 
+                                        2021년까지 기록된 생물종은 총 56,248종이다. 
+                                        이 중 동물계에 속하는 종이 32,273종으로, 전체 기록종의 약 57%에 이른다.
+                                        동물계에서 가장 큰 비중을 차지하는 종은 곤충류로, 동물계 전체의 약 61%에 이른다.
+                                        고유종이란 지리적으로 한정된 지역이나 국가에만 분포하여 서식하는 생물을 가리킨다.
+                                        우리나라에서 자라는 생물 56,248종 중에서 약 4%가 한반도에서만 서식한다.
+                                    </p>
+                                    <p>(2) 지구상에 서식하는 것으로 추정되는 생물종은 약 1,300만 종으로,
+                                        매일 70종씩 사라져 2050년까지 생물종의 25%가 멸종할 것으로 예측된다.
+                                        이러한 멸종 속도는 자연적인 멸종에 비해 1,000배나 빠른 것이다.
+                                        생물종의 보호는 우리가 생물 다양성으로부터 풍부한 혜택을 누리기도 하지만,
+                                        기후 위기 속에서 생태계의 균형을 회복하는 역할을 한다는 점에서 매우 중요하다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_close">닫기</button>
+                    </div>
+                </div>
+                <div id="pop_info_3" class="pop_wrap" style="display:none;">
+                    <div class="pop_inner">
+                        <div class="pop_eco">
+                            <p class="dsc">윤리적 책임</p>
+                            <div class="pop_eco_div2">
+                                <div class="pop_eco_txt">
+                                    <p>인간이 동물에게 어떤 윤리적 책임을 지는가입니다. 동물이 고통을 느낄 수 있는 존재라는 사실은 우리가 그들을 학대하거나 이용하는 방식을 재검토해야 할 윤리적 이유를 제공합니다. 인간은 지구상에서 가장 강력한 생명체로써, 다른 종에게 미치는 영향에 대한 도덕적 책임을 져야 합니다.</p>
+                                    <p>동물을 도덕적 고려의 대상에서 배제하는 것이 부당하다는 점입니다. 우리는 단순히 인간이 아니라, 이성을 가진 존재로서 우리의 도덕적 판단을 넓혀, 동물의 권리와 복지에 대한 책임을 자각해야 합니다. 이러한 책임은 동물을 위한 법적 보호, 공장식 축산의 중단, 실험동물에 대한 윤리적 대우 등 다양한 방식으로 나타날 수 있습니다.</p>
+                                    <p>또한, 동물에 대한 인간의 책임은 환경 윤리와도 밀접하게 연관됩니다. 생태계 전체의 균형을 유지하기 위해 인간은 다른 생명체들과 공존할 수 있는 방식을 찾아야 하며, 이는 동물의 생명과 복지를 존중하는 윤리적 선택을 요구합니다. 이는 인간의 자원 소비 방식을 재고하게 만들며, 보다 지속 가능한 미래를 위한 도덕적 기초를 제공합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_close">닫기</button>
+                    </div>
+                </div>
+                <div id="pop_info_4" class="pop_wrap" style="display:none;">
+                    <div class="pop_inner">
+                        <div class="pop_eco">
+                            <p class="dsc">인간의 삶의 질 향상</p>
+                            <div class="pop_eco_div2">
+                                <img src="images/section02/ecosystem_04.png" alt="삶의 질 향상의 이미지" class="eco_02">
+                                <div class="pop_eco_txt">
+                                    <p>생태계는 인간의 삶의 질 향상에 필수적인 역할을 합니다. 건강한 생태계는 깨끗한 공기, 물, 식량, 기후 조절 등 인간에게 필요한 다양한 서비스를 제공하며, 이는 곧 삶의 질 향상으로 이어집니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section lcs_Bg">
+                <div class="license">
+                    <div class="license_top">
+                        <h2>동물을 지키기 위해<br>무슨 자격증이 필요한가?</h2>
+                    </div>
+                    <div class="license_bot">
+                        <a href="license_01.html" class="license_box license_01" aria-label="축산 관련 자격증"></a>
+                        <a href="license_02.html" class="license_box license_02" aria-label="반려 동물 관련 자격증"></a>
+                        <a href="license_03.html" class="license_box license_03" aria-label="동물 복지 관련 자격증"></a>
+                    </div>
+                </div>
+            </div>
+            <footer class="section fp-auto-height" data-menuanchor="footer">
+                <div class="footer-inner">
+                    <div class="footer-left">
+                        <h3 class="footer-logo">
+                            <img src="images/logo/logo_01.png" alt="사이트 로고">
+                        </h3>
+                        <p class="footer-desc">© 2025 Animals. All rights reserved.</p>
+                    </div>
+                    <div class="footer-right">
+                        <label for="relatedSites" class="footer-label"></label>
+                        <select id="relatedSites" class="footer-select" onchange="openRelatedSite(this)">
+                            <option value="" class="site-info">관련사이트</option>
+                            <option value="https://www.animal.go.kr/">동물보호관리시스템</option>
+                            <option value="https://apms.epis.or.kr/">동물사랑배움터</option>
+                            <option value="https://www.qia.go.kr/">농림축산검역본부</option>
+                            <option value="https://www.nias.go.kr/">국립축산과학원</option>
+                        </select>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        var target = document.querySelectorAll('.pet_box');
+        var btnPopClose = document.querySelectorAll('.pop_wrap .btn_close');
+        var targetID;
+
+        // 팝업 열기
+        for (var i = 0; i < target.length; i++) {
+            target[i].addEventListener('click', function(e){
+                e.preventDefault(); // 링크 기본동작 방지
+                targetID = this.getAttribute('href');
+                if (targetID && targetID !== '#') {
+                    document.querySelector(targetID).style.display = 'block';
+                }
+            });
+        }
+
+        // 팝업 닫기
+        for (var j = 0; j < btnPopClose.length; j++) {
+            btnPopClose[j].addEventListener('click', function(){
+                this.closest('.pop_wrap').style.display = 'none';
+            });
+        }
+
+        // 푸터
+        function openRelatedSite(select) {
+            const url = select.value;
+            if (url) {
+                window.open(url, '_blank');
+                select.selectedIndex = 0; // 선택 초기화
+            }
+        }
+    </script>
+</body>
+</html>

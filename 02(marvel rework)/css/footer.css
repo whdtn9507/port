@@ -1,0 +1,90 @@
+footer{
+    width: 100%;height: 250px; background-color: #222;
+    position: relative;
+    top: .5rem; left: 0;
+}
+
+.footer_infor {
+    display: flex;
+    padding: 30px 20px; 
+    width: 100%;
+    position: absolute;
+    top: 0; left: 250px;
+}
+.footer_infor h2 img {width: 100px; height: 100px;}
+.footer_infor ul{
+    padding-left: 20px;
+}
+.footer_infor li{
+    padding-bottom: 20px; 
+    padding-right: 15px; 
+}
+
+.footer_infor li a {
+    color: white;
+    font-size: 13px;
+}
+
+.footer_infor li a:hover{
+    color: rgb(127, 126, 127);
+}
+
+.footer_right{
+    margin-left: 400px;
+}
+
+.footer_right img{
+    position: relative;
+    top: 30px; right: 50px;
+
+}
+
+.up img{
+    width: 50px;
+}
+
+.down img{
+    width: 30px; 
+}
+.footer_right p, .footer_right h2{
+    padding-left: 10px;
+    font-size: 12px;
+    color: white;
+}
+
+.down h2, .down p{
+    position: relative;
+    top: -15px;
+}
+
+.sns ul{
+    position: absolute;
+    top: 40px; left: 1450px;
+}
+.sns ul li{
+    float: right;
+    padding-left: 20px;
+}
+
+.sns li a{
+    color: white;
+}
+
+.sns li a.m:hover{
+    color: rgb(223, 232, 171);
+}
+
+.sns li a.you:hover{
+    color: rgb(255, 34, 34);
+}
+.sns li a.face:hover{
+    color: dodgerblue;
+}
+
+.footer_last address{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    padding: 12px 14px;
+}

@@ -1,0 +1,40 @@
+.mon_player_table{
+    margin: 12vw auto 0;
+    width: 70vw; height: auto;
+}
+
+.player_select{
+    display: flex; flex-direction: row; gap: 1vw;
+    justify-content: center; flex-wrap: nowrap;
+    width: 100%; height: auto; text-align: center;
+    font-size: 35px; font-family: 'nexon_L';
+}
+
+.selectBox{padding: 15px 10px;}
+.selectBox input[type="radio"]{display: none;}
+.selectBox input[type="radio"] + label{
+    display: inline-block;
+    width: 200px; height: 60px;
+    border: 1px soild #333;
+    line-height: 60px;
+    text-align: center;
+    font-family: 'nexon_L';
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+}
+
+.selectBox input[type="radio"]:checked + label{
+    background-color: #333; color: #fff;
+}
+
+.tab-contents{
+    width: 80vw; height: 30vw;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+}
+
+

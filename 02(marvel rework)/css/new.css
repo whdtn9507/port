@@ -1,0 +1,52 @@
+.banner{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  row-gap: 50px;
+  column-gap: 150px;
+  margin: 10px 380px;
+}
+
+.item01, .item02, .item03, .item04, .item05,
+.item06, .item07, .item08, .item09, .item10{
+  width: 200px;
+  height: 300px;
+  filter:grayscale(100%); transition: 0.5s;
+}
+
+.item01:hover, .item02:hover, .item03:hover, .item04:hover, .item05:hover,
+.item06:hover, .item07:hover, .item08:hover, .item09:hover, .item10:hover{
+  filter: grayscale(0%);
+}
+
+.item01{background: url(../images/new/new01.png);}
+.item02{background: url(../images/new/new02.png);}
+.item03{background: url(../images/new/new03.png);}
+.item04{background: url(../images/new/new04.png);}
+.item05{background: url(../images/new/new05.png);}
+.item06{background: url(../images/new/new06.png);}
+.item07{background: url(../images/new/new07.png);}
+.item08{background: url(../images/new/new08.png);}
+.item09{background: url(../images/new/new09.png);}
+.item10{background: url(../images/new/new10.png);}
+
+.banner a{
+  width: 200px;
+  height: 300px;
+  display: grid;
+  vertical-align: middle;
+  transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  -webkit-transition:all .3s ease;
+  opacity:0;
+}
+
+.banner a:hover{
+  opacity: 1;  
+}
+
+.banner h2{
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}

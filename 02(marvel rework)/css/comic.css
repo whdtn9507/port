@@ -1,0 +1,32 @@
+.swiper-container {
+    width: 1300px;
+	height: 350px;
+}
+.swiper-slide {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+	box-shadow:0 0 5px #555;
+	max-width:100%;
+}
+
+.intro{
+    width: 1000px;
+    height: 100px;
+    position: relative;
+    top: 25px; left: 450px;
+    line-height: 2;
+    letter-spacing: 2px;
+    background: rgba(0,0,0,0.7);
+}
+
+.intro p{
+    text-align: justify;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
