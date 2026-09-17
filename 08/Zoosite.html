@@ -1,127 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificate</title>
-
-    <!-- ico -->
-    <link rel="icon" type="image/x-icon" href="images/ico/animals_icon.ico">
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/default.css">
-    <link rel="stylesheet" type="text/css" href="css/sub.css">
-
-    <!-- 라이브러리 -->
-    <link rel="stylesheet" type="text/css" href="library/fullpage/css/jquery.fullpage.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script type="text/javascript" src="library/jquery/js/jquery-3.7.1.min.js"></script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="동물 보호와 복지 정보를 확인할 수 있는 공공기관 안내">
+  <title>ANIMALS — 관련 기관</title>
+  <link rel="icon" href="images/ico/animals_icon.ico"><link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <h2><a href="index.html"><img src="/images/logo/logo_01.png" alt="반려동물 전문 사이트 로고"></a></h2>
-        <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
-        <nav id="menuNav">
-            <!-- <div class="menu-container">
-                <ul class="menu">
-                    <li><a href="#" data-menuanchor="section03">관련사이트</a></li>
-                </ul>
-            </div> -->
-        </nav>
-    </header>
-
-    <main>
-        <div class="cert_article selectTab">
-            <div class="certNav">
-                <ul role="tablist" class="tabList">			
-                    <li class="on"><a href="#tab_1" role="tab" aria-controls="tab_1" tabindex="-1" aria-label="동물사육파트탭"><span>동물사육파트</span></a></li>
-                    <li><a href="#tab_2" role="tab" aria-controls="tab_2" tabindex="-1" aria-label="동물훈련파트탭"><span>동물훈련파트</span></a></li>
-                </ul>
-            </div>
-            <div class="cert_slider_icon"></div>
-            <div id="tab_1" class="certNav_conts fade-in" role="tabpanel" >
-                <ul class="cert_slider">
-                    <li>
-                        <a href="#" title="내용" class="cert_list_item">
-                            <div class="cert_tit">
-                                <div class="cert_div">
-                                    <span class="cert_tabTit">동물 사육</span>
-                                    <h2>동물원사육사</h2>
-                                    <span class="cert_job_tit">(Zookeeper)</span>
-                                    <div class="job_conts">
-                                        <img src="../08/images/sub/zookeeper/img_slider_01.jpg" alt="사육사이미지">
-                                        <p><strong>동물원사육사</strong>는 동물을 보살피고 기르는 직업을 말한다. 즉, 사육을 전문으로 하는 직업이다. 동물원하면 떠오르는 직업 중 하나이다. 물론 동물농장에서 일하면서 가축이나 승마용 말 같은 산업용 동물을 맡는 직종이나 애견 훈련소 같은 곳에서 일하는 종사자도 사육사로 부른다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>   
-                </ul>
-            </div>
-        </div>
-    </main>
-
-    <!-- 메뉴 토글 JS -->
-    <script type="text/javascript" src="/js/header.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        $(document).ready(function() {
-            // slick 초기화
-            $('.cert_slider').slick({
-                slidesToShow: 3,
-                slideToScroll: 1,
-                slidePerRow: 1,
-                centerMode: true,
-                centerPadding: '150px',
-                autoplay: true,
-                speed: 2000,
-                cssEase: 'ease-out',
-                infinite: true,
-                arrows: true,
-                appendArrows:$('.slider-btn-con'),
-                prevArrow:'<button type="button" class="prev-btn"><i class="xi-angle-left"></i></button>',
-                nextArrow:'<button type="button" class="next-btn"><i class="xi-angle-right"></i></button>',
-                responsive: [
-                    {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                    },
-                    {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                    }
-                ]
-            });
-            // 탭 메뉴 클릭 이벤트
-             $(".certNav .tabList li").click(function (e) {
-                e.preventDefault(); // 링크 기본동작 방지
-
-                // 탭 버튼 스타일 조정
-                $(".certNav .tabList li").removeClass("on");
-                $(this).addClass("on");
-
-                // 탭 콘텐츠 전환
-                const target = $(this).find("a").attr("href"); // 예: "#tab_1"
-                $(".certNav_conts").hide(); // 전체 숨기고
-                $(target).show();           // 해당 탭 콘텐츠만 보여줌
-
-                // slick 위치 재조정 (중요)
-                $(target).find('.cert_slider').slick('setPosition');
-            });
-
-            // 초기에 tab_1만 표시
-            $(".certNav_conts").hide();
-            $("#tab_1").show();
-        });
-    </script>
-</body>
-</html>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="header solid"><a class="brand" href="index.html">ANIMALS<span>.</span></a><button class="menuBtn" aria-controls="nav" aria-expanded="false">메뉴</button><nav id="nav"><a href="index.html#why">왜 보호할까요</a><a href="index.html#action">함께 실천하기</a><a href="index.html#career">관련 진로</a><a href="Zoosite.html">관련 기관</a></nav></header>
+<main id="main">
+  <section class="section resourceHero"><p class="eyebrow">TRUSTED RESOURCES</p><h1>더 정확한 정보는<br><em>공식 기관</em>에서 확인하세요.</h1><p>동물 보호, 반려동물 교육, 검역과 사육 관련 정보를 확인할 수 있는 공공기관을 모았습니다.</p></section>
+  <section class="section resources" aria-labelledby="resource-title"><h2 id="resource-title" class="srOnly">관련 기관 목록</h2>
+    <a class="resourceCard r1" href="https://www.animal.go.kr/" target="_blank" rel="noopener noreferrer"><span>01</span><div><p>동물보호관리시스템</p><h3>국가동물보호정보시스템</h3><small>동물 등록·유기동물·보호 정보 확인</small></div><i>↗</i></a>
+    <a class="resourceCard r2" href="https://apms.epis.or.kr/" target="_blank" rel="noopener noreferrer"><span>02</span><div><p>농림수산식품교육문화정보원</p><h3>동물사랑배움터</h3><small>반려동물 문화와 교육 콘텐츠</small></div><i>↗</i></a>
+    <a class="resourceCard r3" href="https://www.qia.go.kr/" target="_blank" rel="noopener noreferrer"><span>03</span><div><p>농림축산검역본부</p><h3>동물 검역·방역 정보</h3><small>가축 질병과 검역 관련 안내</small></div><i>↗</i></a>
+    <a class="resourceCard r4" href="https://www.nias.go.kr/" target="_blank" rel="noopener noreferrer"><span>04</span><div><p>국립축산과학원</p><h3>축산 연구와 정보</h3><small>축산 기술·연구 자료 확인</small></div><i>↗</i></a>
+  </section>
+</main>
+<footer><a class="brand" href="index.html">ANIMALS<span>.</span></a><p>동물과 공존하기 위한 정보 안내 프로젝트</p><a href="project-case.html">프로젝트 소개 보기 ↗</a><small>© 2026 ANIMALS. Educational project.</small></footer>
+<script src="js/header.js"></script></body></html>
