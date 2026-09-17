@@ -1,35 +1,6 @@
-$(document).ready(function () {
-  $('#fullpage').fullpage({
-    anchors: ['section01', 'section02', 'section03', 'footer'],
-    scrollOverflow: true,
-    navigation: true,
-    navigationPosition: 'left',
-    navigationTooltips: ['First Section', 'Second Section', 'Third Section'],
-    scrollingSpeed: 1000,
-    paddingTop: 0,
-    responsiveWidth: 768, // 768px 이하에서는 fullPage 비활성화
-    afterLoad: function(anchorLink, index) {
-      if (index === 1) {
-        $('header').removeClass('scrolled');
-      } else {
-        $('header').addClass('scrolled');
-      }
-      AOS.refresh();
-    }
-  });
-});
-
-// 햄버거 메뉴 열기
-$('.menu-toggle').on('click', function () {
-  $('#menuNav').toggleClass('open');
-  $('body').toggleClass('menu-open');
-});
-
-// 모바일 하위 메뉴 열기
-$('#menuNav .has-sub').on('click', function (e) {
-  if ($(window).width() <= 768) {
-    e.preventDefault();
-    const $li = $(this).parent();
-    $li.toggleClass('active').siblings().removeClass('active');
-  }
-});
+const header=document.querySelector('.header'),button=document.querySelector('.menuBtn'),nav=document.querySelector('.header nav');
+const setHeader=()=>header?.classList.toggle('solid',scrollY>32);setHeader();addEventListener('scroll',setHeader,{passive:true});
+button?.addEventListener('click',()=>{const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',open);button.textContent=open?'닫기':'메뉴'});
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');button?.setAttribute('aria-expanded','false');if(button)button.textContent='메뉴'}));
+document.querySelectorAll('[data-modal]').forEach(button=>button.addEventListener('click',()=>document.getElementById(button.dataset.modal)?.showModal()));
+document.querySelectorAll('dialog').forEach(dialog=>{dialog.querySelector('.close')?.addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()})});
