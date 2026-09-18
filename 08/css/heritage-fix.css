@@ -6,3 +6,4 @@
 @media(max-width:1250px){.heritagePrev{left:0}.heritageNext{right:0}}
 @media(max-width:760px){.heritageCard{height:430px;margin:0 8px}}
 .heritageHeading{display:flex;align-items:flex-end;justify-content:space-between;gap:28px}.heritageHeading h2{margin-bottom:0}.heritageHeading .heritageLink{flex:0 0 auto;margin:0 0 11px;padding-bottom:5px;border-bottom:1px solid currentColor;font-size:.9rem}.heritageHeading .heritageLink span{margin-left:8px;font-size:1.1rem}@media(max-width:760px){.heritageHeading{display:block}.heritageHeading .heritageLink{display:inline-block;margin-top:18px;margin-bottom:0}}
+.zSection .zTitle h2{font-size:clamp(2rem,3.2vw,3.6rem);line-height:1.14}
