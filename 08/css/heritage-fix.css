@@ -1,0 +1,7 @@
+.heritageSlider{margin:60px 0 0}
+.heritageCard{height:450px;margin:0 12px;background-size:cover;background-position:center}
+.heritageSlider .slick-list{overflow:hidden}
+.heritagePrev{left:-64px}
+.heritageNext{right:-64px}
+@media(max-width:1250px){.heritagePrev{left:0}.heritageNext{right:0}}
+@media(max-width:760px){.heritageCard{height:430px;margin:0 8px}}
