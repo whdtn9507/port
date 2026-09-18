@@ -8,3 +8,4 @@
 .heritageHeading{display:flex;align-items:flex-end;justify-content:space-between;gap:28px}.heritageHeading h2{margin-bottom:0}.heritageHeading .heritageLink{flex:0 0 auto;margin:0 0 11px;padding-bottom:5px;border-bottom:1px solid currentColor;font-size:.9rem}.heritageHeading .heritageLink span{margin-left:8px;font-size:1.1rem}@media(max-width:760px){.heritageHeading{display:block}.heritageHeading .heritageLink{display:inline-block;margin-top:18px;margin-bottom:0}}
 .zSection .zTitle h2{font-size:clamp(2rem,3.2vw,3.6rem);line-height:1.14}
 .zSection .zTitle{max-width:none}.zSection .zTitle>p:last-child{max-width:640px}
+@media(min-width:761px){main>.zSection,.zMissionIn{padding-top:clamp(56px,7vh,80px);padding-bottom:clamp(56px,7vh,80px)}.zExplore,.zCareerGrid{margin-top:36px}.zExploreCard{min-height:clamp(260px,38vh,330px)}.heritageSlider{margin-top:34px}.heritageCard{height:clamp(280px,42vh,350px)}.zMission li{padding:18px 0}}
