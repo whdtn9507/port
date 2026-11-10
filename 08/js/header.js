@@ -1,5 +1,17 @@
 /* No wheel/touch interception, scroll snapping, jQuery or Slick runtime. */
 document.addEventListener('DOMContentLoaded',()=>{
+ document.documentElement.classList.add('js-enabled');
+ document.querySelectorAll('.animalTile').forEach(card=>{
+  const button=card.querySelector('.animalToggle'),hint=card.querySelector('.animalToggleHint');let pinned=false;
+  const set=open=>{card.classList.toggle('is-open',open);button.setAttribute('aria-expanded',String(open));if(hint)hint.textContent=open?'설명 닫기 −':'설명 보기 +'};
+  card.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')set(true)});
+  card.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'&&!pinned&&!card.contains(document.activeElement))set(false)});
+  card.addEventListener('focusin',()=>set(true));
+  card.addEventListener('focusout',e=>{if(!card.contains(e.relatedTarget)&&!pinned)set(false)});
+  button.addEventListener('click',()=>{pinned=!pinned;set(pinned)});
+  card.addEventListener('keydown',e=>{if(e.key==='Escape'){pinned=false;set(false)}});
+ });
+
  const header=document.querySelector('.header'),menu=document.querySelector('.menuBtn'),nav=header?.querySelector('nav');
  const closeMenu=()=>{nav?.classList.remove('open');menu?.setAttribute('aria-expanded','false');if(menu)menu.textContent='메뉴'};
  const updateHeader=()=>header?.classList.toggle('solid',scrollY>32||document.body.classList.contains('sub-page'));
