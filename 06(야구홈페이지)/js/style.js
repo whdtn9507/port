@@ -1,37 +1,12 @@
-// select 박스로 이용한 표
-// $('').change(function(){
-//     var chk = $('#seriesRate option:selected').val();
-//     console.log(chk);
-
-//     var str = '';
-//     var season = '';
-//     var rate = '';
-
-//     switch (chk) {
-//         case 'first';
-//             season = '[]';
-//             rate = '[]';
-//             break;
-//         case 'second';
-//             season = '[]';
-//             rate = '[]';
-//             break;
-//         case 'third';
-//             season = '[]';
-//             rate = '[]';
-//             break;
-//         default;
-//         break;
-//     }
-
-//     for (var i = 0; i < season.length; i++){
-//         str += '<tr>'
-//             + '<td>' + season[i] + '</td>'
-//             + '<td>' + rate[i] + '</td>'
-//             + '</tr>'
-//     }
-//     $('#seriesList').html(str);
-// });
-
-// 타이머
-
+document.addEventListener('DOMContentLoaded',()=>{
+ const header=document.querySelector('.siteHeader'),menu=document.querySelector('.menuToggle'),nav=document.querySelector('.siteNav');
+ const close=()=>{nav?.classList.remove('open');menu?.setAttribute('aria-expanded','false');if(menu)menu.textContent='메뉴'};
+ menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'닫기':'메뉴'});
+ nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('click',e=>{if(!header.contains(e.target))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus()}});matchMedia('(min-width:901px)').addEventListener('change',close);
+ const tabs=[...document.querySelectorAll('.playerTab')];
+ const select=index=>{tabs.forEach((t,i)=>{const on=i===index;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on})};
+ tabs.forEach((t,i)=>{t.addEventListener('click',()=>select(i));t.addEventListener('keydown',e=>{let next=i;if(e.key==='ArrowRight')next=(i+1)%tabs.length;else if(e.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();select(next);tabs[next].focus()})});
+ const rail=document.querySelector('.swiper-wrapper');const scroll=direction=>rail?.scrollBy({left:direction*rail.clientWidth*.85,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});document.querySelector('.galleryPrev')?.addEventListener('click',()=>scroll(-1));document.querySelector('.galleryNext')?.addEventListener('click',()=>scroll(1));rail?.addEventListener('keydown',e=>{if(e.target!==rail)return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();scroll(e.key==='ArrowRight'?1:-1)}});
+ const dialog=document.querySelector('.photoDialog');let opener=null;
+ document.querySelectorAll('.galleryOpen').forEach(b=>b.addEventListener('click',()=>{opener=b;dialog.querySelector('img').src=b.querySelector('img').src;dialog.querySelector('img').alt=b.querySelector('img').alt;dialog.showModal()}));dialog?.querySelector('.dialogClose').addEventListener('click',()=>dialog.close());dialog?.addEventListener('close',()=>opener?.focus());dialog?.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()});
+});

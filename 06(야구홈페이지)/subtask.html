@@ -1,96 +1,42 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/subtask.css">
-    <link rel="shortcut icon" href="images/ico/logo.ico">
-    <title>Player</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul class="mon_list">
-                <li><a href="index.html">Monster</a></li>
-                <li><a href="subtask.html">Player</a>
-                    <ul class="sub-menu">
-                        <li><a href="subtask.html" data-value="coach">감독</a></li>
-                        <li><a href="subtask.html" data-value="coach">코치</a></li>
-                        <li><a href="subtask.html" data-value="coach">선수단</a></li>
-                        <li><a href="subtask.html" data-value="pitcher">중계진</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html"><img src="images/monster_logo.svg" alt="로고"></a></li>
-                <li><a href="https://wb-play.co.kr/ckmonsters.html" target="_blank">Shop</a></li>
-                <li><a href="#">Scene</a></li>
-            </ul>
-        </nav>
-    </header>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="css/reset.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/subtask.css" rel="stylesheet"/>
+<link href="images/ico/logo.ico" rel="shortcut icon"/>
+<title>Team Monster — 선수단</title>
+<link href="css/adaptive.css" rel="stylesheet"/></head>
+<body><a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="siteHeader"><div class="headerInner"><a class="siteBrand" href="index.html"><img alt="Monster 로고" src="images/monster_logo.svg"/><span>TEAM MONSTER</span></a><button aria-controls="site-nav" aria-expanded="false" class="menuToggle" type="button">메뉴</button><nav aria-label="주요 메뉴" class="siteNav" id="site-nav"><a href="index.html">Home</a><a aria-current="page" href="subtask.html">Players</a><a href="index.html#gallery">Gallery</a><a href="https://wb-play.co.kr/ckmonsters.html" rel="noopener noreferrer" target="_blank">Shop ↗</a></nav></div></header><main id="main"><section class="pageIntro"><p class="eyebrow">FAN PROJECT · 2024 ARCHIVE</p><h1>Team Monster 선수단</h1><p>2024년 당시 콘텐츠를 바탕으로 만든 개인 팬 페이지입니다. 현재 경기 결과나 최신 선수 명단을 제공하는 공식 사이트는 아닙니다.</p></section><div class="mon_player_table">
+<div aria-label="선수 포지션" class="player_select" role="tablist"><button aria-controls="introduce" aria-selected="true" class="playerTab" id="tab-introduce" role="tab" tabindex="0" type="button">전체</button><button aria-controls="coach" aria-selected="false" class="playerTab" id="tab-coach" role="tab" tabindex="-1" type="button">감독 / 코치</button><button aria-controls="pitcher" aria-selected="false" class="playerTab" id="tab-pitcher" role="tab" tabindex="-1" type="button">투수</button><button aria-controls="catcher" aria-selected="false" class="playerTab" id="tab-catcher" role="tab" tabindex="-1" type="button">포수</button><button aria-controls="inplayer" aria-selected="false" class="playerTab" id="tab-inplayer" role="tab" tabindex="-1" type="button">내야수</button><button aria-controls="outplayer" aria-selected="false" class="playerTab" id="tab-outplayer" role="tab" tabindex="-1" type="button">외야수</button></div>
+<p class="rosterNote">포지션을 선택해 명단을 확인하세요. 작은 화면에서는 명단을 가로로 스크롤하거나 크게 볼 수 있습니다.</p></div><div aria-labelledby="tab-introduce" class="tab-contents" id="introduce" role="tabpanel"><h2>전체</h2>
+<figure class="rosterImage"><img alt="선수단 소개" src="images/player/img_mon_introduce.jpg"/></figure>
+<a class="imageLink" href="images/player/img_mon_introduce.jpg" rel="noopener noreferrer" target="_blank">선수단 이미지 크게 보기 ↗</a></div><div aria-labelledby="tab-coach" class="tab-contents" hidden="" id="coach" role="tabpanel"><h2>감독 / 코치</h2>
+<figure class="rosterImage"><img alt="감독/코치 소개 이미지" src="images/player/img_mon_coach.jpg"/></figure>
+<a class="imageLink" href="images/player/img_mon_coach.jpg" rel="noopener noreferrer" target="_blank">선수단 이미지 크게 보기 ↗</a></div><div aria-labelledby="tab-pitcher" class="tab-contents" hidden="" id="pitcher" role="tabpanel"><h2>투수</h2>
+<figure class="rosterImage"><img alt="투수 소개 이미지" src="images/player/img_mon_pitcher.jpg"/></figure>
+<a class="imageLink" href="images/player/img_mon_pitcher.jpg" rel="noopener noreferrer" target="_blank">선수단 이미지 크게 보기 ↗</a></div><div aria-labelledby="tab-catcher" class="tab-contents" hidden="" id="catcher" role="tabpanel"><h2>포수</h2>
+<figure class="rosterImage"><img alt="포수 소개 이미지" src="images/player/img_mon_catcher.jpg"/></figure>
+<a class="imageLink" href="images/player/img_mon_catcher.jpg" rel="noopener noreferrer" target="_blank">선수단 이미지 크게 보기 ↗</a></div><div aria-labelledby="tab-inplayer" class="tab-contents" hidden="" id="inplayer" role="tabpanel"><h2>내야수</h2>
+<figure class="rosterImage"><img alt="내야수 소개 이미지" src="images/player/img_mon_inplayer.jpg"/></figure>
+<a class="imageLink" href="images/player/img_mon_inplayer.jpg" rel="noopener noreferrer" target="_blank">선수단 이미지 크게 보기 ↗</a></div><div aria-labelledby="tab-outplayer" class="tab-contents" hidden="" id="outplayer" role="tabpanel"><h2>외야수</h2>
+<figure class="rosterImage"><img alt="외야수 소개 이미지" src="images/player/img_mon_outplayer.jpg"/></figure>
+<a class="imageLink" href="images/player/img_mon_outplayer.jpg" rel="noopener noreferrer" target="_blank">선수단 이미지 크게 보기 ↗</a></div></main>
 
-    <div class="mon_player_table">
-        <div class="player_select">
-            <div class="selectBox">
-                <input type="radio" id="tab1" name="tabList" value="#coach">
-                <label for="tab1">감독 / 코치</label>
-            </div>
-            <div class="selectBox">
-                <input type="radio" id="tab2" name="tabList" value="#pitcher">
-                <label for="tab2">투수</label>
-            </div>
-            <div class="selectBox">
-                <input type="radio" id="tab3" name="tabList" value="#catcher">
-                <label for="tab3">포수</label>
-            </div>
-            <div class="selectBox">
-                <input type="radio" id="tab4" name="tabList" value="#inplayer">
-                <label for="tab4">내야수</label>
-            </div>
-            <div class="selectBox">
-                <input type="radio" id="tab5" name="tabList" value="#outplayer">
-                <label for="tab5">외야수</label>
-            </div>
-        </div>
-    </div>
 
-    
-    <div id="introduce" class="tab-contents">
-        <img src="images/player/img_mon_introduce.jpg" alt="선수단 소개">
-    </div>
-    <div id="coach" class="tab-contents">
-        <img src="images/player/img_mon_coach.jpg" alt="감독/코치 소개 이미지">
-    </div>
-    <div id="pitcher" class="tab-contents">
-        <img src="images/player/img_mon_pitcher.jpg" alt="투수 소개 이미지">
-    </div>
-    <div id="catcher" class="tab-contents">
-        <img src="images/player/img_mon_catcher.jpg" alt="포수 소개 이미지">
-    </div>
-    <div id="inplayer" class="tab-contents">
-        <img src="images/player/img_mon_inplayer.jpg" alt="내야수 소개 이미지">
-    </div>
-    <div id="outplayer" class="tab-contents">
-        <img src="images/player/img_mon_outplayer.jpg" alt="외야수 소개 이미지">
-    </div>
 
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            // 해당 버튼 클릭시 해당 설명 나오기
-            $(".tab-contents").not(":first").hide();
 
-            $(".player_select input").on("click", function(){
-                $(this).parent().addClass("active").siblings().removeClass("active");
 
-                var link = $(this).attr("value");
-                $(".tab-contents").hide();
-                $(link).show();
-            });
-        })
-    </script>
-</body>
+
+
+<!-- Jquery -->
+
+
+
+<script defer="True" src="js/style.js"></script><footer><div class="inner"><p>TEAM MONSTER · 개인 팬 페이지</p><a href="index.html">홈으로</a></div><p class="fanNote">개인 팬 페이지 · 2024년 콘텐츠 아카이브. 원본이미지·영상 권리는 각 권리자에게 있습니다.</p></footer><dialog aria-label="사진 크게 보기" class="photoDialog"><div class="lightboxInner"><button class="dialogClose" type="button">닫기</button><img alt=""/></div></dialog></body>
 </html>
