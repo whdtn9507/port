@@ -1,37 +1,12 @@
-// select 박스로 이용한 표
-// $('').change(function(){
-//     var chk = $('#seriesRate option:selected').val();
-//     console.log(chk);
-
-//     var str = '';
-//     var season = '';
-//     var rate = '';
-
-//     switch (chk) {
-//         case 'first';
-//             season = '[]';
-//             rate = '[]';
-//             break;
-//         case 'second';
-//             season = '[]';
-//             rate = '[]';
-//             break;
-//         case 'third';
-//             season = '[]';
-//             rate = '[]';
-//             break;
-//         default;
-//         break;
-//     }
-
-//     for (var i = 0; i < season.length; i++){
-//         str += '<tr>'
-//             + '<td>' + season[i] + '</td>'
-//             + '<td>' + rate[i] + '</td>'
-//             + '</tr>'
-//     }
-//     $('#seriesList').html(str);
-// });
-
-// 타이머
-
+document.addEventListener('DOMContentLoaded',()=>{
+ const header=document.querySelector('.siteHeader'),menu=document.querySelector('.menuToggle'),nav=document.querySelector('.siteNav');
+ const close=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='메뉴'};
+ menu.addEventListener('click',()=>{const on=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(on));menu.textContent=on?'닫기':'메뉴'});
+ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('click',e=>{if(!header.contains(e.target))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus()}});matchMedia('(min-width:901px)').addEventListener('change',close);
+ const tabs=[...document.querySelectorAll('.playerTab')],cards=[...document.querySelectorAll('.playerCard')],search=document.querySelector('#player-search');let position='all';
+ const filter=()=>{const query=(search?.value||'').trim().replace(/\s/g,'').toLowerCase();let count=0;cards.forEach(c=>{const show=(position==='all'||c.dataset.position===position)&&c.dataset.name.toLowerCase().includes(query);c.hidden=!show;if(show)count++});const result=document.querySelector('.resultCount');if(result)result.textContent=count+'명의 파이터즈 · 2025 공개 라인업 일부';const empty=document.querySelector('.emptyState');if(empty)empty.hidden=count>0};
+ const select=i=>{tabs.forEach((t,n)=>{t.setAttribute('aria-selected',String(i===n));t.tabIndex=i===n?0:-1});position=tabs[i].dataset.filter;document.querySelector('#player-panel').setAttribute('aria-labelledby',tabs[i].id);filter()};
+ tabs.forEach((t,i)=>{t.addEventListener('click',()=>select(i));t.addEventListener('keydown',e=>{let next=i;if(e.key==='ArrowRight')next=(i+1)%tabs.length;else if(e.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();select(next);tabs[next].focus()})});search?.addEventListener('input',filter);filter();
+ const rail=document.querySelector('.swiper-wrapper');const scroll=direction=>rail?.scrollBy({left:direction*rail.clientWidth*.85,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});document.querySelector('.galleryPrev')?.addEventListener('click',()=>scroll(-1));document.querySelector('.galleryNext')?.addEventListener('click',()=>scroll(1));rail?.addEventListener('keydown',e=>{if(e.target===rail&&(e.key==='ArrowRight'||e.key==='ArrowLeft')){e.preventDefault();scroll(e.key==='ArrowRight'?1:-1)}});
+ const dialog=document.querySelector('.photoDialog');let opener=null;document.querySelectorAll('.galleryOpen').forEach(b=>b.addEventListener('click',()=>{const img=b.querySelector('img');if(!img?.getAttribute('src'))return;opener=b;dialog.querySelector('img').src=img.src;dialog.querySelector('img').alt=img.alt;dialog.querySelector('.dialogCaption').textContent=img.alt;dialog.showModal()}));dialog?.querySelector('.dialogClose').addEventListener('click',()=>dialog.close());dialog?.addEventListener('close',()=>opener?.focus());dialog?.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()});
+});
